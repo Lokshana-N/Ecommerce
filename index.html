@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mini-ecommerce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>GREAT  GOD</header>
+
+  <div class="top-bar">
+    <input type="text" id="search" placeholder="Search products.">
+    <button onclick="searchProducts()">Search</button>
+    <div class="cart-container">
+      <button id="cart-btn" onclick="viewCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+    </div>
+  </div>
+
+  <div class="product-list">
+    <div class="product">
+      <img src="smarttv.jpg" alt="Croma TV">
+      <h2>Croma 109 cm (43 inch) Full HD LED Smart Linux TV with Bezel Less Display</h2>
+      <p>₹90,900</p>
+      <p>Experience every pixel come alive — crystal-clear clarity, vibrant colors, and cinematic sound, all in one stunning screen.</p>
+      <button onclick="addToCart('Croma TV', 90900)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="mobile.jpg" alt="iPhone 16">
+      <h2>Apple iPhone 16 128GB Ultramarine MYEC3HN/A Mobile</h2>
+      <p>₹1,00,000</p>
+      <p>iPhone — where innovation meets elegance in the palm of your hand</p>
+      <button onclick="addToCart('iPhone', 100000)">Add to Cart</button>
+    </div>
+  </div>
+
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCart()">&times;</span>
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: ₹<span id="total-price">0</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
